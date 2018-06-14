@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { PATH_HOME } from '../constantes.routes';
 
 @Component({
@@ -12,7 +12,9 @@ export class DetailComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('idDetail snapshot', this.route.snapshot.paramMap.get('idDetail'))
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      console.log("isDetail", params.get('idDetail'));
+    })
   }
 
   navigateToHome() {
