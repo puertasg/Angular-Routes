@@ -6,4 +6,4 @@ export const PATH_DETAIL: string = 'detail';
 export const ROUTES: Routes = [
     { path: PATH_HOME, component: HomeComponent },
     { path: PATH_DETAIL, component: DetailComponent }
-];
+]
