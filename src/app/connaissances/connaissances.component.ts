@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnaissancesComponent implements OnInit {
 
+  connaissances: Array<string>;
+
   constructor() { }
 
   ngOnInit() {
+    this.connaissances = [
+      "connaissance 1",
+      "connaissance 2",
+      "connaissance 3",
+      "connaissance 4"
+    ]
   }
 
 }

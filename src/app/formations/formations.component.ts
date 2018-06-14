@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormationsComponent implements OnInit {
 
+  formations: Array<string>;
+
   constructor() { }
 
   ngOnInit() {
+    this.formations = [
+      "formation 1",
+      "formation 2",
+      "formation 3",
+      "formation 4"
+    ]
   }
 
 }
