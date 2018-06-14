@@ -26,10 +26,10 @@
 
 <nav class="nav">
   <span class="nav__menu">
-    <a href="" routerLink="/" routerLinkActive="nav__item_selected">Home</a>
+    <a href="" [routerLink]="['/']">Home</a>
   </span>
   <span class="nav__menu">
-    <a href="" routerLink="/detail" routerLinkActive="nav__item_selected">Detail</a>
+    <a href="" [routerLink]="['/detail', idDetail]">Detail</a>
   </span>
 </nav>
 
