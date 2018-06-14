@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-formations',
@@ -9,15 +10,10 @@ export class FormationsComponent implements OnInit {
 
   formations: Array<string>;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.formations = [
-      "formation 1",
-      "formation 2",
-      "formation 3",
-      "formation 4"
-    ]
+    this.route.data.subscribe(data => this.formations = data['formations']);
   }
 
 }
