@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,11 @@ export class AppComponent implements OnInit {
   title = 'app';
   idDetail: number = 1;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.router.events.subscribe((event) => {
+      console.log('EVENTS', event);
+    })
   }
 }

@@ -10,16 +10,11 @@ import { FormationsResolvers } from './Resolvers/FormationsResolvers';
 export const ROUTES: Routes = [
     { path: PATH_HOME, component: HomeComponent },
     {
-        path: PATH_DETAIL,
+        path: PATH_DETAIL + '/:idDetail',
         component: DetailComponent,
         children: [
             { path: '', pathMatch: 'full', redirectTo: PATH_DETAIL_FORMATIONS },
-            {
-                path: PATH_DETAIL_FORMATIONS, component: FormationsComponent, canActivate: [LoggedInGuard],
-                resolve: {
-                    formations: FormationsResolvers
-                }
-            },
+            { path: PATH_DETAIL_FORMATIONS, component: FormationsComponent, resolve: { formations: FormationsResolvers } },
             { path: PATH_DETAIL_SKILLS, component: ConnaissancesComponent, canActivate: [LoggedInGuard] }
         ]
     }
