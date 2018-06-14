@@ -7,7 +7,7 @@ export class FormationsResolvers implements Resolve<any> {
     }
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
 
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 resolve([
                     'Module Angular',
