@@ -15,10 +15,6 @@ export class AppComponent implements OnInit {
     this.router.navigate([PATH_HOME])
   }
 
-  navigateToDetail() {
-    this.router.navigate([PATH_DETAIL])
-  }
-
   ngOnInit() {
   }
 }
